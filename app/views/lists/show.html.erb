@@ -1,0 +1,14 @@
+<h1><%= @list.name %></h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+   <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+<% @bookmarks.each do |bookmark|%>
+<%= bookmark.movie.title %>
+  <%= bookmark.comment  %>
+  <%end %>
+
+<%=link_to "Go Back", lists_path%>
