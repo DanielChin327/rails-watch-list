@@ -23,7 +23,7 @@ def create
   if @list.save
     redirect_to lists_path
   else
-    render :new, status: :unprocessable_entity
+    render :show, status: :unprocessable_entity
   end
 end
 

@@ -1,9 +1,14 @@
 <h1><%= @list.name %></h1>
 
+<% if @list.photo.attached? %>
+  <%= cl_image_tag(@list.photo.key,
+  width: 400, height: 300, crop: :fill)%>
+<% else %>
+  <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
+<% end %>
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
   <%= f.association :movie %>
-  <%= f.input :photo, as: :file %>
    <%= f.submit class: 'btn btn-primary' %>
 <% end %>
 
