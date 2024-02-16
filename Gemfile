@@ -52,7 +52,7 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
 gem "faker"
-
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 group :development, :test do
