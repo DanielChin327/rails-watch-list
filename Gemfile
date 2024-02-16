@@ -53,7 +53,7 @@ gem "simple_form"
 gem "sassc-rails"
 gem "faker"
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
