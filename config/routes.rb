@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
  # nothing is required for movies
-  root to: 'lists#index' # This makes the default page change to home page
+  root 'lists#index' # This makes the default page change to home page
   resources :lists, only: [:index, :new, :create, :show] do
     resources :bookmarks, only: [:new, :create]
   end
