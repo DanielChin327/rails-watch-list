@@ -1,21 +1,16 @@
 
-
-
-<div class="banner" style="background-image: url('https://static.vecteezy.com/system/resources/previews/007/439/409/large_2x/rows-of-red-velvet-seats-watching-movies-in-the-cinema-with-copy-space-banner-background-entertainment-and-theater-concept-3d-illustration-rendering-photo.jpg');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/02/57/52/11/360_F_257521199_oYHHL4owRzuWSz6TeEUQxxr7HBM9b8JG.jpg);">
   <div class="container">
     <h1>Here is the LISTS</h1>
     <p>Learn what other people like and judge!</p>
+
+  </div>
   <% @lists.each do |list|%>
   <div class="list">
     <%= link_to list.name, list_path(list), class:"white" %>
-  </div>
+
 <% end %>
-
-
-
-
   </div>
-
 <%= link_to new_list_path, class: "btn btn-success",id:"button" ,  style: "margin-top: 30px;" do %>
   <i class="bi bi-plus-lg"></i> Make a New List
 <% end %>
