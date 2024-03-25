@@ -1,19 +1,18 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/02/57/52/11/360_F_257521199_oYHHL4owRzuWSz6TeEUQxxr7HBM9b8JG.jpg);">
   <div class="container">
-    <h1>Here is the LISTS</h1>
+    <h1>The LIST</h1>
     <p>Learn what other people like and judge!</p>
 
   </div>
-  <% @lists.each do |list|%>
-  <div class="list">
-    <%= link_to list.name, list_path(list), class:"white" %>
-
-<% end %>
   </div>
+
+<div class="list text-center">
+  <% @lists.each do |list|%>
+    <%= link_to list.name, list_path(list), class:"black" %>
+  <% end %>
+</div>
+
 <%= link_to new_list_path, class: "btn btn-success",id:"button" ,  style: "margin-top: 30px;" do %>
   <i class="bi bi-plus-lg"></i> Make a New List
 <% end %>
-
-
-</div>
